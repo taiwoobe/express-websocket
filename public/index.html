@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Websockets</title>
-    <link rel="stylesheet" href="./styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.1/socket.io.js"></script>
-</head>
-<body>
-    <h1>App Running</h1>
-    <script src="./chat.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Websockets</title>
+        <link rel="stylesheet" href="./styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.1/socket.io.js"></script>
+    </head>
+    <body>
+        <div id="chat-wrapper">
+            <h2>Simple Chat</h2>
+            <div id="chat-window">
+                <div id="output"></div>
+            </div>
+            <input id="username" type="text" placeholder="Username" />
+            <input id="message" type="text" placeholder="Message" />
+            <button id="send">Send</button>
+        </div>
+        <script src="./chat.js"></script>
+    </body>
 </html>

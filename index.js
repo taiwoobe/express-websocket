@@ -13,8 +13,13 @@ const server = app.listen(port, () => {
 app.use(express.static('public'));
 
 // Socket setup
-var io = socket(server);
+const io = socket(server);
 
 io.on('connection', (socket) => {
     console.log("Socket connection established.", socket.id);
+
+    // Listen to message from client
+    socket.on("chat", (data) => {
+        io.sockets.emit("chat", data);
+    })
 })
